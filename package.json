@@ -1,0 +1,47 @@
+{
+  "name": "Accademia",
+  "version": "1.0.0",
+  "author": "TestAmmissione S.r.l.",
+  "license": "CC0-1.0",
+  "description": "Preparazione avanzata per i concorsi!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win"
+  },
+  "repository": "https://github.com/accademiatestammissione/accademia/",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.3"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.1"
+  },
+  "build": {
+    "appId": "com.testammissione",
+    "mac": {
+      "category": "public.app-category.education",
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "target": ["nsis"]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "repo": "accademia",
+        "owner": "accademiatestammissione",
+        "private": false
+      }
+    ]
+  }
+}
